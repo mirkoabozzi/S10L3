@@ -16,7 +16,7 @@ const MyNav = () => {
             <NavLink to="/" className="nav-link">
               Home
             </NavLink>
-            <NavLink to="/tvshows" className="nav-link">
+            <NavLink to="/tv-shows" className="nav-link">
               TvShow
             </NavLink>
             <NavLink to="#movies" className="nav-link">

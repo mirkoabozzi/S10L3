@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import MyFooter from "./components/MyFooter";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TvShows from "./components/TvShows";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <MyNav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tvshows" element={<TvShows />} />
+          <Route path="/tv-shows" element={<TvShows />} />
+          <Route path="/moviedetails/:movieId" element={<MovieDetails />} />
 
           {/* <MySettings /> */}
         </Routes>
