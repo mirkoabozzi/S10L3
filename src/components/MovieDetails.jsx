@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Badge, Col, Container, Image, ListGroup, Row, Spinner } from "react-bootstrap";
-import { useNavigate, useParams } from "react-router-dom";
+import { Alert, Badge, Col, Container, Image, ListGroup, Row, Spinner } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
@@ -64,21 +64,27 @@ const MovieDetails = () => {
           <Row className="mt-4">
             <Col>
               <ListGroup>
-                {comments.map((commento) => {
-                  return (
-                    <ListGroup.Item key={commento._id} title={commento.author}>
-                      <Row className="justify-content-between">
-                        <Col sm={8} md={6}>
-                          <h5>{commento.author}</h5>
-                          <p>{commento.comment}</p>
-                        </Col>
-                        <Col sm={3}>
-                          <Badge className="m-2">{commento.rate}</Badge>
-                        </Col>
-                      </Row>
-                    </ListGroup.Item>
-                  );
-                })}
+                {comments.length > 0 ? (
+                  <>
+                    {comments.map((commento) => {
+                      return (
+                        <ListGroup.Item key={commento._id} title={commento.author}>
+                          <Row className="justify-content-between">
+                            <Col sm={8} md={6}>
+                              <h5>{commento.author}</h5>
+                              <p>{commento.comment}</p>
+                            </Col>
+                            <Col sm={3}>
+                              <Badge className="m-2">{commento.rate}</Badge>
+                            </Col>
+                          </Row>
+                        </ListGroup.Item>
+                      );
+                    })}
+                  </>
+                ) : (
+                  <Alert> Non ci sono commenti</Alert>
+                )}
               </ListGroup>
             </Col>
           </Row>

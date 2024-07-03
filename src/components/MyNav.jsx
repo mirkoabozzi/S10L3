@@ -1,9 +1,10 @@
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from "../data/netflix_logo.png";
 import kids from "../data/kids_icon.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const MyNav = () => {
+  const navigate = useNavigate();
   return (
     <Navbar expand="lg">
       <Container>
@@ -40,10 +41,10 @@ const MyNav = () => {
             <img src={kids} alt="NetflixLogo" width={"30x"} height={"30px"} className="mx-2" />
             <NavDropdown title="" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
+              <NavLink to="/my-settings" className="nav-link">
+                Settings
+              </NavLink>
               <NavDropdown.Item href="#action/3.3">Exit</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
