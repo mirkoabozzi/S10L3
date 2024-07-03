@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TvShows from "./components/TvShows";
 import MovieDetails from "./components/MovieDetails";
 import MySettings from "./components/MySettings";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/tv-shows" element={<TvShows />} />
           <Route path="/moviedetails/:movieId" element={<MovieDetails />} />
           <Route path="/my-settings" element={<MySettings />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <MyFooter />
       </BrowserRouter>

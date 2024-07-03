@@ -54,7 +54,7 @@ class MySlick extends Component {
       })
       .then((response) => {
         this.setState({ movies: response.Search, isLoading: false });
-        console.log("Film della fetch", response.Search);
+        // console.log("Film della fetch", response.Search);
       })
       .catch((error) => console.log(error));
   };

@@ -20,7 +20,7 @@ const MyCarousel = (props) => {
       .then((response) => {
         setMovies(response.Search);
         setIsLoading(false);
-        console.log("Film della fetch", response.Search);
+        // console.log("Film della fetch", response.Search);
       })
       .catch((error) => console.log(error));
   };
