@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Carousel, Col, Image, Row, Spinner } from "react-bootstrap";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const MyCarousel = (props) => {
   const [movies, setMovies] = useState([]);

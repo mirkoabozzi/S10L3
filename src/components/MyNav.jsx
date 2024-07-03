@@ -39,11 +39,9 @@ const MyNav = () => {
               <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
             </svg>
             <img src={kids} alt="NetflixLogo" width={"30x"} height={"30px"} className="mx-2" />
-            <NavDropdown title="" id="basic-nav-dropdown">
+            <NavDropdown align="end" title="" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-              <NavLink to="/my-settings" className="nav-link">
-                Settings
-              </NavLink>
+              <NavDropdown.Item onClick={() => navigate("/my-settings/")}> Settings</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Exit</NavDropdown.Item>
             </NavDropdown>
           </Nav>

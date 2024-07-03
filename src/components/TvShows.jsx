@@ -1,4 +1,13 @@
+import MyCarousel from "./MyCarousel";
+import { Container } from "react-bootstrap";
+
 const TvShows = () => {
-  return <h1 className="text-center"> TvShow </h1>;
+  return (
+    <Container>
+      <MyCarousel titolo="Trending Now" film="narcos" />;
+      <MyCarousel titolo="Watch Again" film="harry potter" />
+      <MyCarousel titolo="New Release" film="lupin" />
+    </Container>
+  );
 };
 export default TvShows;
